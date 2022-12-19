@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show question</title>
+  <link rel="stylesheet" href="./Assets/stylesheets/show_question.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script type="module" src="./Assets/javascripts/show_questions.js"></script>
+
+</head>
+
+<body>
+  <div class="loading" , id="loading">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h2 id="my_ques"></h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="id1" class="answer">
+          <label for="a" id="opt1"></label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="id2" class="answer">
+          <label for="b" id="opt2"></label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="id3" class="answer">
+          <label for="c" id="opt3"></label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="id4" class="answer">
+          <label for="d" id="opt4"></label>
+        </li>
+      </ul>
+    </div>
+    <button id="submit">Submit</button>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

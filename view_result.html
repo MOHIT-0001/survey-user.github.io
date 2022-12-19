@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <body>
+    <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+
+    <script>
+      if (localStorage.getItem("yValues")) {
+        var xValues = ["Option 1", "Option 2", "Option 3", "option4"];
+        var yValues = JSON.parse(localStorage.getItem("yValues"));
+        var barColors = ["red", "green", "blue", "orange"];
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "World Wine Production 2018",
+            },
+          },
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "OOPS...",
+          text: "Something Went Wrong!",
+        });
+      }
+    </script>
+  </body>
+</html>
